@@ -8,7 +8,11 @@ jobs:
     steps:
       - name: Step 1
         run: hostname
-      - name: Step 2
-        run: echo "${{ toJSON(github) }}"
       
-    
+  job2:
+    info:
+      runs-on: windows-latest
+      steps:
+        - name: Step 1
+          run: echo "${{ toJSON(github) }}"
+
