@@ -1,0 +1,17 @@
+name: My Third Action
+'on': [workflow_dispatch]
+
+jobs:
+  job1:
+    name: Get machine info
+    runs-on: windows-latest
+    steps:
+      - name: Step 1
+        run: hostname
+  
+  Infojob:
+      needs: job1
+      runs-on: ubuntu-latest
+      steps:
+        - name: Step 1
+          run: echo "${{ toJSON(github) }}"
