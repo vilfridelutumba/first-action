@@ -3,7 +3,7 @@ name: My First Action
 
 jobs:
   job1:
-    name: Get IP
+    name: Get machine info
     runs-on: windows-latest
     steps:
       - name: Step 1
@@ -11,4 +11,12 @@ jobs:
       - name: Step 2
         run: ipconfig
       
+  job2:
+    name: Get machine info 2
+    runs-on: windows-latest
+    steps:
+      - name: Step 1
+        run: |
+          hostname
+          ipconfig /all
     
