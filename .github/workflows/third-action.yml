@@ -1,6 +1,10 @@
-name: My Third Action
-'on': [workflow_dispatch]
-
+name: Event triggers
+'on':
+  push:
+    branches:
+      -'main'
+  workflow_dispatch:
+      
 jobs:
   job1:
     name: Get machine info
