@@ -8,9 +8,8 @@ jobs:
     steps:
       - name: Step 1
         run: hostname
-      
-  job2:
-    info:
+  
+  Infojob:
       runs-on: windows-latest
       steps:
         - name: Step 1
