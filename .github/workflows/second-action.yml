@@ -10,6 +10,7 @@ jobs:
         run: hostname
   
   Infojob:
+      needs: job1
       runs-on: ubuntu-latest
       steps:
         - name: Step 1
