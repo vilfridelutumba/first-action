@@ -1,0 +1,14 @@
+name: My First Action
+'on': [push, workflow_dispatch]
+
+jobs:
+  job1:
+    name: Get machine info
+    runs-on: windows-latest
+    steps:
+      - name: Step 1
+        run: hostname
+      - name: Step 2
+        run: echo "${{ toJSON(github) }}"
+      
+    
