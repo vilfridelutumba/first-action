@@ -1,10 +1,14 @@
 name: My First Action
 'on': [workflow_dispatch]
+
 jobs:
   job1:
     name: Get IP
     runs-on: windows-latest
     steps:
       - name: Step 1
-      run: ipconfig /all
+        run: hostname
+      - name: Step 2
+        run: ipconfig
+      
     
