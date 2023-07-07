@@ -1,4 +1,4 @@
-name: My First Action
+name: My Second Action
 'on': [push, workflow_dispatch]
 
 jobs:
