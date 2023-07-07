@@ -10,7 +10,7 @@ jobs:
         run: hostname
   
   Infojob:
-      runs-on: windows-latest
+      runs-on: ubuntu-latest
       steps:
         - name: Step 1
           run: echo "${{ toJSON(github) }}"
