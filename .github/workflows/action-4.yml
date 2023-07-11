@@ -18,7 +18,7 @@ jobs:
             package_id: "${{ github.workflow }}"
             version: 1
             output_folder: './'
-            base_path: .
+            base_path: './'
             files: README.md              
         - name: Publish filename
           id: publish
