@@ -8,3 +8,4 @@ jobs:
           run: |
             echo "${{ toJSON(github) }}"
             echo "${{ github.workflow }}"
+            echo "${{ github.jobs }}"
