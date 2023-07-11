@@ -15,7 +15,7 @@ jobs:
         - name: Zip files
           uses: OctopusDeploy/create-zip-package-action@v3
           with:
-            package_id: README.md
+            package_id: demo.md
             version: 1
             output_folder: './'
             base_path: ./
