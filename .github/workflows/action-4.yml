@@ -15,7 +15,7 @@ jobs:
         - name: Zip files
           uses: OctopusDeploy/create-zip-package-action@v3
           with:
-            package_id: "${{ github.workflow }}"
+            package_id: README.md
             version: 1
             output_folder: './'
             base_path: ./
