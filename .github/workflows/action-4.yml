@@ -12,6 +12,15 @@ jobs:
             echo "${{ toJSON(github) }}"
             echo "${{ github.workflow }}"
             echo "${{ github.job }}"
+        - name: Zip files
+          uses: OctopusDeploy/create-zip-package-action@v3
+          with:
+            package_id: "${{ github.workflow }}"
+            version: 1
+            output_folder: './'
+            base_path: ./
+            files: |
+              README.md              
         - name: Publish filename
           id: publish
-          run: echo 'script-file={}' >> $GITHUB_OUTPUT ';'
+          run: find ./*.md -type f -execdir echo 'script-file={}' >> $GITHUB_OUTPUT ';'
