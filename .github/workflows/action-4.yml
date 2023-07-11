@@ -20,7 +20,7 @@ jobs:
             output_folder: './'
             base_path: ./
             files: |
-              README.md              
+              demo.md              
         - name: Publish filename
           id: publish
           run: find ./*.md -type f -execdir echo 'script-file={}' >> $GITHUB_OUTPUT ';'
