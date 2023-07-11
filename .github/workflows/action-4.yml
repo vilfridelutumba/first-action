@@ -1,11 +1,17 @@
 name: EnvVar
 'on': [push, workflow_dispatch]      
 jobs: 
+    
   Infojob:
       runs-on: ubuntu-latest
+      outputs:
+        script-file: ${{ steps.publish.ouputs.script-file }}
       steps:
         - name: Step 1
           run: |
             echo "${{ toJSON(github) }}"
             echo "${{ github.workflow }}"
             echo "${{ github.job }}"
+        - name: Publish filename
+          id: publish
+          run: echo 'script-file={}' >> $GITHUB_OUTPUT ';'
